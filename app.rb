@@ -1,9 +1,29 @@
 require "sinatra"
 require "sinatra/reloader"
 
+moves = ["rock","paper","scissors"]
+
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  erb(:rules)
+end
+
+get "/rock" do
+  @comp = moves[rand(0..2)]
+  erb(:rock)
+end
+
+get "/paper" do
+  @comp = moves[rand(0..2)]
+  erb(:paper)
+end
+
+get "/scissors" do
+  @comp = moves[rand(0..2)]
+  erb(:scissors)
+end
+
+
+### TEMPLATE - DELETE LATER ###
+get "/" do
+
 end
