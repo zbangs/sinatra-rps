@@ -21,9 +21,3 @@ get "/scissors" do
   @comp = moves[rand(0..2)]
   erb(:scissors)
 end
-
-
-### TEMPLATE - DELETE LATER ###
-get "/" do
-
-end
